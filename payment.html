@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" type="image/png" href="img/Velora.png">
+    <title>Velora</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+<header class="payment-header">
+    <div class="container header-inner">
+       <a href="index.html" class="velora-logo">
+                <img src="img/Velora.png" alt="Velora Restaurant & Catering">
+            </a>
+
+        
+    </div>
+</header>
+
+<main class="checkout-page">
+    <div class="container">
+
+        <div class="checkout-heading">
+            <div>
+                <span class="eyebrow">ANTIXOR CATERING</span>
+                <h1>Complete Your Order</h1>
+                <p>Choose your payment method and confirm your order.</p>
+            </div>
+
+            <a href="./Explore Our Menu.html" class="back-link">← Back to menu</a>
+        </div>
+
+        <form id="paymentForm" novalidate>
+            <div class="checkout-grid">
+
+                <!-- LEFT -->
+                <section class="checkout-card payment-card">
+
+                    <div class="section-title">
+                        <div class="step-number">01</div>
+                        <div>
+                            <h2>Contact Information</h2>
+                            <p>We'll use these details for your order confirmation.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="field full">
+                            <label for="fullName">Full Name</label>
+                            <input id="fullName" name="fullName" type="text" placeholder="Your full name" autocomplete="name" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email Address</label>
+                            <input id="email" name="email" type="email" placeholder="you@example.com" autocomplete="email" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="phone">Phone Number</label>
+                            <input id="phone" name="phone" type="tel" placeholder="+20 10 1234 5678" autocomplete="tel" required>
+                        </div>
+                    </div>
+
+                    <div class="divider"></div>
+
+                    <div class="section-title payment-title">
+                        <div class="step-number">02</div>
+                        <div>
+                            <h2>Payment Method</h2>
+                            <p>Select how you'd like to pay.</p>
+                        </div>
+                    </div>
+
+                    <div class="payment-methods" role="tablist">
+
+                        <button type="button" class="payment-method active" data-method="card">
+                            <span class="method-icon">💳</span>
+                            <span>
+                                <strong>Card</strong>
+                                <small>Visa / Mastercard / Meeza</small>
+                            </span>
+                            <span class="method-check">✓</span>
+                        </button>
+
+                        <button type="button" class="payment-method" data-method="wallet">
+                            <span class="method-icon">📱</span>
+                            <span>
+                                <strong>Wallet</strong>
+                                <small>Vodafone / Orange / Etisalat / WE</small>
+                            </span>
+                            <span class="method-check">✓</span>
+                        </button>
+
+                        <button type="button" class="payment-method" data-method="fawry">
+                            <span class="method-icon">🟣</span>
+                            <span>
+                                <strong>Fawry</strong>
+                                <small>Pay with a Fawry reference</small>
+                            </span>
+                            <span class="method-check">✓</span>
+                        </button>
+
+                        <button type="button" class="payment-method" data-method="bank">
+                            <span class="method-icon">🏦</span>
+                            <span>
+                                <strong>Bank Transfer</strong>
+                                <small>Manual bank transfer</small>
+                            </span>
+                            <span class="method-check">✓</span>
+                        </button>
+
+                        <button type="button" class="payment-method" data-method="deposit">
+                            <span class="method-icon">🧾</span>
+                            <span>
+                                <strong>Pay Deposit</strong>
+                                <small>Reserve now, pay the rest later</small>
+                            </span>
+                            <span class="method-check">✓</span>
+                        </button>
+
+                    </div>
+
+                    <!-- CARD -->
+                    <div class="payment-panel active" id="cardPanel">
+
+                        <div class="accepted-cards">
+                            <span>Accepted cards</span>
+                            <div class="card-brands">
+                                <span class="brand-card visa">VISA</span>
+                                <span class="brand-card master">●●</span>
+                                <span class="brand-card amex">AMEX</span>
+                                <span class="brand-card meeza">meeza</span>
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label for="cardNumber">Card Number</label>
+                            <div class="input-icon-wrap">
+                                <input id="cardNumber" type="text" inputmode="numeric" maxlength="19"
+                                       placeholder="0000 0000 0000 0000" autocomplete="cc-number">
+                                <span>💳</span>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="expiry">Expiry Date</label>
+                                <input id="expiry" type="text" maxlength="5" placeholder="MM / YY" autocomplete="cc-exp">
+                            </div>
+
+                            <div class="field">
+                                <label for="cvv">CVV</label>
+                                <input id="cvv" type="password" inputmode="numeric" maxlength="4"
+                                       placeholder="•••" autocomplete="cc-csc">
+                            </div>
+                        </div>
+
+                        <div class="secure-note">
+                            <span>🔐</span>
+                            <p>Your card details should be handled by a PCI-compliant payment gateway. This demo does not process real card payments.</p>
+                        </div>
+                    </div>
+
+                    <!-- WALLET -->
+                    <div class="payment-panel" id="walletPanel">
+
+                        <div class="wallet-grid">
+                            <button type="button" class="wallet-option" data-wallet="vodafone">
+                                <span class="wallet-logo vodafone">
+                                    <span class="wallet-logo-mark">VF</span>
+                                </span>
+                                <strong>Vodafone Cash</strong>
+                                <span class="wallet-check">✓</span>
+                            </button>
+
+                            <button type="button" class="wallet-option" data-wallet="orange">
+                                <span class="wallet-logo orange">
+                                    <span class="wallet-logo-mark">O</span>
+                                </span>
+                                <strong>Orange Cash</strong>
+                                <span class="wallet-check">✓</span>
+                            </button>
+
+                            <button type="button" class="wallet-option" data-wallet="etisalat">
+                                <span class="wallet-logo etisalat">
+                                    <span class="wallet-logo-mark">e&</span>
+                                </span>
+                                <strong>Etisalat Cash</strong>
+                                <span class="wallet-check">✓</span>
+                            </button>
+
+                            <button type="button" class="wallet-option" data-wallet="we">
+                                <span class="wallet-logo we">
+                                    <span class="wallet-logo-mark">WE</span>
+                                </span>
+                                <strong>WE Pay</strong>
+                                <span class="wallet-check">✓</span>
+                            </button>
+                        </div>
+
+                        <div class="field">
+                            <label for="walletNumber">Wallet Phone Number</label>
+                            <input id="walletNumber" type="tel" placeholder="+20 10 1234 5678">
+                        </div>
+
+                        <div class="info-box">
+                            <span>ℹ️</span>
+                            <p>After confirming your order, you'll continue through the selected wallet's secure payment flow.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAWRY -->
+                    <div class="payment-panel" id="fawryPanel">
+
+                        <div class="fawry-box">
+                            <div class="fawry-logo">fawry</div>
+                            <h3>Pay through Fawry</h3>
+                            <p>We'll provide your Fawry reference number after the order is confirmed.</p>
+                        </div>
+
+                        <div class="info-box">
+                            <span>🧾</span>
+                            <p>Take the reference number to an available Fawry payment location and complete the payment before the order deadline.</p>
+                        </div>
+                    </div>
+
+                    <!-- BANK -->
+                    <div class="payment-panel" id="bankPanel">
+
+                        <div class="bank-details">
+                            <div>
+                                <span>Bank</span>
+                                <strong>Velora Catering Account</strong>
+                            </div>
+                            <div>
+                                <span>Account Name</span>
+                                <strong>Velora Catering</strong>
+                            </div>
+                            <div>
+                                <span>Account Number</span>
+                                <strong>XXXX XXXX XXXX</strong>
+                            </div>
+                            <div>
+                                <span>IBAN</span>
+                                <strong>EG XX XXXX XXXX XXXX XXXX XXXX XX</strong>
+                            </div>
+                        </div>
+
+                        <div class="info-box">
+                            <span>🏦</span>
+                            <p>Use your order name as the transfer reference. Replace the placeholder bank details above with your real business account before publishing.</p>
+                        </div>
+                    </div>
+
+                    <!-- DEPOSIT -->
+                    <div class="payment-panel" id="depositPanel">
+
+                        <div class="deposit-card">
+                            <div>
+                                <span>Required today</span>
+                                <strong id="depositAmount">$0</strong>
+                            </div>
+                            <div>
+                                <span>Remaining balance</span>
+                                <strong id="remainingAmount">$0</strong>
+                            </div>
+                        </div>
+
+                        <p class="deposit-copy">
+                            Pay a 30% deposit now to reserve your order. The remaining amount is settled on delivery.
+                        </p>
+                    </div>
+
+                    <label class="terms-check">
+                        <input type="checkbox" id="terms" required>
+                        <span>
+                            I agree to Velora's order terms and understand that this demo checkout
+                            must be connected to a real payment provider before accepting real payments.
+                        </span>
+                    </label>
+
+                    <div class="trust-strip">
+                        <span>🔒 SSL Secured</span>
+                        <span>🛡️ PCI-DSS Ready</span>
+                        <span>✓ 256-bit Encryption</span>
+                    </div>
+
+                    <button class="pay-button" type="submit">
+                        <span id="payButtonText">Pay $0</span>
+                        <span>→</span>
+                    </button>
+
+                    <p class="demo-warning">
+                        DEMO CHECKOUT — No real payment is processed from this page.
+                    </p>
+
+                </section>
+
+                <!-- RIGHT -->
+                <aside class="checkout-card order-card">
+
+                    <div class="order-top">
+                        <span class="eyebrow">YOUR ORDER</span>
+                        <h2>Order Summary</h2>
+                    </div>
+
+                    <div class="event-preview">
+                        <div class="event-icon">🍽️</div>
+                        <div>
+                            <span id="eventTypeLabel">MENU ORDER</span>
+                            <strong id="orderSubtitle">No items selected</strong>
+                        </div>
+                    </div>
+
+                    <!-- Filled dynamically from the cart saved on the menu page -->
+                    <div class="summary-list" id="summaryList"></div>
+
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <strong id="totalAmount">$0</strong>
+                    </div>
+
+                    <div class="trust-list">
+                        <div>
+                            <span>✓</span>
+                            <p>Professional catering service</p>
+                        </div>
+                        <div>
+                            <span>✓</span>
+                            <p>Order confirmation by email</p>
+                        </div>
+                        <div>
+                            <span>🔒</span>
+                            <p>Secure payment gateway integration ready</p>
+                        </div>
+                    </div>
+
+                    <a href="./Explore Our Menu.html" class="edit-link">← Edit your order</a>
+
+                </aside>
+
+            </div>
+        </form>
+
+    </div>
+</main>
+
+<footer class="payment-footer">
+    <div class="container footer-inner">
+        <p>© 2026 Velora Catering. All Rights Reserved.</p>
+        <div>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+        </div>
+    </div>
+</footer>
+
+<div class="success-modal" id="successModal">
+    <div class="success-box">
+        <button class="close-modal" id="closeModal">×</button>
+        <div class="success-icon">✓</div>
+        <span class="eyebrow">REQUEST RECEIVED</span>
+        <h2>Your order request is ready!</h2>
+        <p>
+            This is a front-end demo. Connect the form to your payment gateway
+            to process the transaction and confirm the order automatically.
+        </p>
+        <button class="modal-button" id="modalOk">Back to Velora</button>
+    </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>

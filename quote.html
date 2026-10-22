@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <link rel="icon" type="image/png" href="img/Velora.png">
+    <title>Velora</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header class="header" id="siteHeader">
+        <nav class="navbar container">
+
+            <a href="index.html" class="velora-logo">
+                <img src="img/Velora.png" alt="Antixor Restaurant & Catering">
+            </a>
+              <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Services</a></li>
+                <li><a href="Explore Our Menu.html">Menu</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="about.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+
+                <div class="nav-search" id="navSearch">
+                    <button class="search-btn" id="searchToggle" aria-label="Search">⌕</button>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search the menu...">
+                </div>
+
+                <a href="./contact.html" class="quote-btn">
+                    Contact US
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </nav>
+
+        <!-- Mobile menu — no duplicate id, and matches desktop nav exactly -->
+        <div class="mobile-menu" id="mobileMenu">
+              <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Services</a></li>
+                <li><a href="Explore Our Menu.html">Menu</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="about.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="./contact.html" class="quote-btn mobile-quote-btn">Contact Us</a>
+        </div>
+    </header>
+
+
+    <!-- ================= QUOTE HERO ================= -->
+
+    <section class="quote-hero">
+
+        <div class="quote-overlay"></div>
+
+        <div class="container quote-hero-content">
+
+            <span>LET'S PLAN YOUR EVENT</span>
+
+            <h1>
+                Get a
+                <strong>Custom Quote</strong>
+            </h1>
+
+            <p>
+                Tell us about your event and our catering team
+                will create a personalized proposal for you.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= QUOTE SECTION ================= -->
+
+    <section class="quote-section">
+
+        <div class="container">
+
+            <div class="quote-grid">
+
+
+                <!-- LEFT SIDE -->
+
+                <div class="quote-info reveal">
+
+                    <span class="section-label">
+                        GET IN TOUCH
+                    </span>
+
+                    <h2>
+                        Let's Make Your
+                        <strong>Event Special</strong>
+                    </h2>
+
+                    <p>
+                        Whether you're planning a wedding,
+                        corporate event, private party, or
+                        something completely unique, we're here
+                        to make it unforgettable.
+                    </p>
+
+
+                    <div class="quote-info-list">
+
+                        <div class="quote-info-item">
+
+                            <div class="quote-icon">
+                                📞
+                            </div>
+
+                            <div>
+                                <h3>Call Us</h3>
+                                <p>+20 10 1234 5678</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="quote-info-item">
+
+                            <div class="quote-icon">
+                                ✉
+                            </div>
+
+                            <div>
+                                <h3>Email Us</h3>
+                                <p>info@antixor.com</p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="quote-info-item">
+
+                            <div class="quote-icon">
+                                📍
+                            </div>
+
+                            <div>
+                                <h3>Location</h3>
+                                <p>Cairo, Egypt</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Live estimate, filled in as the form is completed -->
+                    <div class="quote-estimate-box" id="quoteEstimateBox">
+                        <span>Estimated total</span>
+                        <strong id="quoteEstimateAmount">$0</strong>
+                        <p id="quoteEstimateDetail">Choose an event type and guest count to see a live estimate.</p>
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT SIDE FORM -->
+
+                <div class="quote-form-box reveal">
+
+                    <div class="quote-form-header">
+
+                        <span>
+                            REQUEST A QUOTE
+                        </span>
+
+                        <h2>
+                            Tell Us About Your Event
+                        </h2>
+
+                    </div>
+
+
+                    <form class="quote-form" id="quoteForm" novalidate>
+
+                        <div class="quote-form-row">
+
+                            <div class="quote-field">
+
+                                <label>
+                                    Full Name
+                                </label>
+
+                                <input type="text" id="fullName" placeholder="Your name" required>
+
+                            </div>
+
+
+                            <div class="quote-field">
+
+                                <label>
+                                    Phone Number
+                                </label>
+
+                                <input type="tel" id="phone" placeholder="+20 10 1234 5678" required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="quote-form-row">
+
+                            <div class="quote-field">
+
+                                <label>
+                                    Email Address
+                                </label>
+
+                                <input type="email" id="email" placeholder="your@email.com" required>
+
+                            </div>
+
+
+                            <div class="quote-field">
+
+                                <label>
+                                    Event Type
+                                </label>
+
+                                <select id="eventType" required>
+
+                                    <option value="">
+                                        Select Event Type
+                                    </option>
+
+                                    <option value="Wedding" data-rate="5">
+                                        Wedding
+                                    </option>
+
+                                    <option value="Corporate Event" data-rate="6">
+                                        Corporate Event
+                                    </option>
+
+                                    <option value="Private Party" data-rate="4">
+                                        Private Party
+                                    </option>
+
+                                    <option value="Custom Catering" data-rate="5">
+                                        Custom Catering
+                                    </option>
+
+                                </select>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="quote-form-row">
+
+                            <div class="quote-field">
+
+                                <label>
+                                    Event Date
+                                </label>
+
+                                <input type="date" id="eventDate" required>
+
+                            </div>
+
+
+                            <div class="quote-field">
+
+                                <label>
+                                    Number of Guests
+                                </label>
+
+                                <input type="number" id="guestCount" placeholder="e.g. 100" min="1" required>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="quote-field">
+
+                            <label>
+                                Tell Us More
+                            </label>
+
+                            <textarea rows="5" id="notes"
+                                placeholder="Tell us about your event, menu preferences, location, or anything else..."></textarea>
+
+                        </div>
+
+
+                        <button type="submit" class="quote-submit">
+                            Request My Quote
+                            <span>→</span>
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <div>
+                    <h3>Stay in the loop</h3>
+                    <p>Seasonal menus, new packages, and the occasional discount — no spam.</p>
+                </div>
+
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="footer-logo">
+                        <img src="img/Velora.png" alt="Antixor Restaurant & Catering">
+                    </a>
+
+
+                    <p>
+                        Creating unforgettable dining experiences
+                        with exceptional food, fresh ingredients,
+                        and professional service.
+                    </p>
+
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.25-1.5 1.55-1.5H16.7V3.7C16.35 3.65 15.2 3.5 13.9 3.5c-2.7 0-4.55 1.65-4.55 4.7v2.7H6.6V14h2.75v8h4.15Z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M4.98 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM3.5 9h3v11.5h-3V9Zm6.6 0h2.87v1.57h.04c.4-.76 1.38-1.57 2.85-1.57 3.05 0 3.6 2 3.6 4.6v6.9h-3v-6.12c0-1.46-.03-3.34-2.04-3.34-2.04 0-2.35 1.6-2.35 3.24v6.22h-3V9Z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                                <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17.2" cy="6.8" r="1" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Our Services</h3>
+
+                    <ul>
+                        <li><a href="wedding.html">Wedding Catering</a></li>
+                        <li><a href="corporate.html">Corporate Events</a></li>
+                        <li><a href="private-parties.html">Private Parties</a></li>
+                        <li><a href="custom-catering.html">Custom Catering</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Contact Us</h3>
+
+                    <ul class="footer-contact">
+                        <li>📍 Cairo, Egypt</li>
+                        <li>📞 +20 10 1234 5678</li>
+                        <li>✉️ info@antixor.com</li>
+                        <li>🕒 Mon - Sat: 9AM - 8PM</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Antixor Catering. All Rights Reserved.
+                </p>
+
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Only one back-to-top button now -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./script.js"></script>
+
+    <script>
+        (function () {
+            var form = document.getElementById('quoteForm');
+            var eventType = document.getElementById('eventType');
+            var guestCount = document.getElementById('guestCount');
+            var eventDate = document.getElementById('eventDate');
+
+            var estimateAmount = document.getElementById('quoteEstimateAmount');
+            var estimateDetail = document.getElementById('quoteEstimateDetail');
+
+            // Don't allow picking a date before today
+            var today = new Date();
+            var yyyy = today.getFullYear();
+            var mm = String(today.getMonth() + 1).padStart(2, '0');
+            var dd = String(today.getDate()).padStart(2, '0');
+            eventDate.setAttribute('min', yyyy + '-' + mm + '-' + dd);
+
+            function money(value) {
+                return '$' + value.toFixed(2);
+            }
+
+            function currentRate() {
+                var selected = eventType.options[eventType.selectedIndex];
+                return selected ? parseFloat(selected.getAttribute('data-rate')) || 0 : 0;
+            }
+
+            function updateEstimate() {
+                var rate = currentRate();
+                var guests = parseInt(guestCount.value, 10);
+
+                if (!rate || !guests || guests < 1) {
+                    estimateAmount.textContent = '$0';
+                    estimateDetail.textContent = 'Choose an event type and guest count to see a live estimate.';
+                    return;
+                }
+
+                var total = rate * guests;
+                estimateAmount.textContent = money(total);
+                estimateDetail.textContent =
+                    eventType.value + ' — ' + guests + ' guests × ' + money(rate) + ' per guest';
+            }
+
+            eventType.addEventListener('change', updateEstimate);
+            guestCount.addEventListener('input', updateEstimate);
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                if (!form.checkValidity()) {
+                    form.reportValidity();
+                    return;
+                }
+
+                var rate = currentRate();
+                var guests = parseInt(guestCount.value, 10);
+
+                if (!rate) {
+                    alert('Please select an event type.');
+                    eventType.focus();
+                    return;
+                }
+
+                if (eventDate.value) {
+                    var chosen = new Date(eventDate.value + 'T00:00:00');
+                    var todayStart = new Date(yyyy + '-' + mm + '-' + dd + 'T00:00:00');
+
+                    if (chosen < todayStart) {
+                        alert('Please choose a date from today onward — that date has already passed.');
+                        eventDate.focus();
+                        return;
+                    }
+                }
+
+                if (!guests || guests < 1) {
+                    alert('Please enter the number of guests.');
+                    guestCount.focus();
+                    return;
+                }
+
+                var total = rate * guests;
+
+                var cart = {
+                    items: [
+                        {
+                            name: eventType.value + ' — ' + guests + ' guests',
+                            price: total
+                        }
+                    ],
+                    total: total.toFixed(2)
+                };
+
+                localStorage.setItem('antixorCart', JSON.stringify(cart));
+                window.location.href = 'payment.html';
+            });
+
+            updateEstimate();
+        })();
+    </script>
+
+</body>
+
+</html>

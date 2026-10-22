@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="icon" type="image/png" href="img/Velora.png">
+    <title>Velora</title>
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <header class="header" id="siteHeader">
+        <nav class="navbar container">
+
+           <a href="index.html" class="velora-logo">
+                <img src="img/Velora.png" alt="Velora Restaurant & Catering">
+            </a>
+
+              <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Services</a></li>
+                <li><a href="Explore Our Menu.html">Menu</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="about.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+
+                <div class="nav-search" id="navSearch">
+                    <button class="search-btn" id="searchToggle" aria-label="Search">⌕</button>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search the menu...">
+                </div>
+
+                <a href="./contact.html" class="quote-btn">
+                    Contact US
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </nav>
+
+        <!-- Mobile menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#8">Services</a></li>
+                <li><a href="Explore Our Menu.html">Menu</a></li>
+                <li><a href="#9">About</a></li>
+                <li><a href="./about.html">Gallery</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+            <a href="./contact.html" class="quote-btn mobile-quote-btn">Contact Us</a>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- =========================
+             Menu Hero
+        ========================== -->
+
+        <section class="menu-hero">
+
+            <video class="menu-hero-video" autoplay muted loop playsinline>
+                <source src="video/istockphoto-1498706701-640_adpp_is (1).mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <div class="menu-hero-overlay"></div>
+
+            <div class="container menu-hero-content">
+
+                <span class="menu-kicker">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M7 2v8M9 2v8M11 2v8M9 10v12M17 2c-2.5 0-4 2-4 5s1.5 5 4 5M17 2v19" />
+                    </svg>
+                    Our menu
+                </span>
+
+                <h1>
+                    Delicious food
+                    <strong>made for every occasion</strong>
+                </h1>
+
+                <p>
+                    A carefully crafted selection of dishes made with
+                    fresh ingredients and exceptional flavors.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             Menu Section (filterable)
+        ========================== -->
+
+        <section class="menu-section reveal">
+
+            <div class="container">
+
+                <div class="section-heading text-center mx-auto">
+
+                    <span class="menu-kicker menu-kicker--dark" style="justify-content:center;">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M7 2v8M9 2v8M11 2v8M9 10v12M17 2c-2.5 0-4 2-4 5s1.5 5 4 5M17 2v19" />
+                        </svg>
+                        Explore our menu
+                    </span>
+
+                    <h2>
+                        Our popular
+                        <span>dishes</span>
+                    </h2>
+
+                    <p>
+                        From delicious starters to satisfying main courses
+                        and sweet desserts, explore our selection of dishes
+                        prepared for every occasion.
+                    </p>
+
+                </div>
+
+
+                <!-- Menu Filter -->
+
+                <div class="menu-filter">
+
+                    <button class="menu-filter-btn active" data-category="all">All</button>
+                    <button class="menu-filter-btn" data-category="starters">Starters</button>
+                    <button class="menu-filter-btn" data-category="main">Main Courses</button>
+                    <button class="menu-filter-btn" data-category="desserts">Desserts</button>
+                    <button class="menu-filter-btn" data-category="drinks">Drinks</button>
+                    <button class="menu-filter-btn" data-category="hot-drinks">Hot Drinks</button>
+                    <button class="menu-filter-btn" data-category="wedding-cakes">Wedding Cakes</button>
+
+                </div>
+
+
+                <!-- Menu Items -->
+
+                <div class="menu-grid">
+
+                    <div class="menu-card" data-category="starters">
+                        <div class="menu-image">
+                            <img src="./img/fresh-garden-salad-recipe-jennifercooks.com_1518-500x500.webp"
+                                alt="Fresh Salad">
+                            <span class="menu-category">Starters</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Fresh Garden Salad" data-price="12"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Fresh Garden Salad</h3>
+                                <strong>$12</strong>
+                            </div>
+                            <p>Fresh vegetables, mixed greens, cherry tomatoes and our special dressing.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="starters">
+                        <div class="menu-image">
+                            <img src="./img/90.webp" alt="Chicken Appetizer">
+                            <span class="menu-category">Starters</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Crispy Chicken Bites" data-price="14"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Crispy Chicken Bites</h3>
+                                <strong>$14</strong>
+                            </div>
+                            <p>Tender chicken pieces served with our creamy signature sauce.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="main">
+                        <div class="menu-image">
+                            <img src="./img/Pates_cremeuses_aux_cubes_de_saumon_et_saumon_fume.webp" alt="Creamy Pasta">
+                            <span class="menu-category">Main Course</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Creamy Pasta" data-price="18"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Creamy Pasta</h3>
+                                <strong>$18</strong>
+                            </div>
+                            <p>Homemade pasta with creamy sauce, fresh herbs and parmesan cheese.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="main">
+                        <div class="menu-image">
+                            <img src="./img/images.jpg" alt="Grilled Steak">
+                            <span class="menu-category">Main Course</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Grilled Steak" data-price="25"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Grilled Steak</h3>
+                                <strong>$25</strong>
+                            </div>
+                            <p>Premium grilled steak served with seasonal vegetables and special sauce.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="main">
+                        <div class="menu-image">
+                            <img src="./img/how-to-grill-salmon-recipe1-1655870645.avif" alt="Grilled Salmon">
+                            <span class="menu-category">Main Course</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Grilled Salmon" data-price="22"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Grilled Salmon</h3>
+                                <strong>$22</strong>
+                            </div>
+                            <p>Fresh salmon fillet grilled to perfection with lemon and fresh herbs.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="desserts">
+                        <div class="menu-image">
+                            <img src="./img/DoubleDhocolateLayerCake_RECIPE_012622_26397.webp" alt="Chocolate Dessert">
+                            <span class="menu-category">Dessert</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Chocolate Cake" data-price="10"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Chocolate Cake</h3>
+                                <strong>$10</strong>
+                            </div>
+                            <p>Rich chocolate cake with creamy chocolate filling and fresh berries.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="desserts">
+                        <div class="menu-image">
+                            <img src="./img/images (1).jpg" alt="Cheesecake">
+                            <span class="menu-category">Dessert</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Classic Cheesecake" data-price="11"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Classic Cheesecake</h3>
+                                <strong>$11</strong>
+                            </div>
+                            <p>Smooth creamy cheesecake topped with fresh seasonal fruits.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="drinks">
+                        <div class="menu-image">
+                            <img src="./img/images (2).jpg" alt="Fresh Juice">
+                            <span class="menu-category">Drinks</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Fresh Fruit Juice" data-price="8"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Fresh Fruit Juice</h3>
+                                <strong>$8</strong>
+                            </div>
+                            <p>Freshly squeezed seasonal fruits served chilled and refreshing.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="main">
+                        <div class="menu-image">
+                            <img src="img/images (3).jpg" alt="Grilled Chicken">
+                            <span class="menu-category">Main Course</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Herb Grilled Chicken" data-price="19"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Herb Grilled Chicken</h3>
+                                <strong>$19</strong>
+                            </div>
+                            <p>Juicy grilled chicken breast with fresh herbs, roasted vegetables and creamy sauce.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="main">
+                        <div class="menu-image">
+                            <img src="./img/images (4).jpg" alt="Beef Tenderloin">
+                            <span class="menu-category">Main Course</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Beef Tenderloin" data-price="28"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Beef Tenderloin</h3>
+                                <strong>$28</strong>
+                            </div>
+                            <p>Tender beef served with roasted potatoes, seasonal vegetables and rich gravy.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="main">
+                        <div class="menu-image">
+                            <img src="img/images (5).jpg" alt="Mushroom Risotto">
+                            <span class="menu-category">Main Course</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Mushroom Risotto" data-price="17"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Mushroom Risotto</h3>
+                                <strong>$17</strong>
+                            </div>
+                            <p>Creamy Italian risotto with wild mushrooms, parmesan cheese and fresh herbs.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="starters">
+                        <div class="menu-image">
+                            <img src="img/images (6).jpg" alt="Bruschetta">
+                            <span class="menu-category">Starters</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Tomato Bruschetta" data-price="9"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Tomato Bruschetta</h3>
+                                <strong>$9</strong>
+                            </div>
+                            <p>Toasted artisan bread topped with fresh tomatoes, basil, garlic and olive oil.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="starters">
+                        <div class="menu-image">
+                            <img src="img/images (7).jpg" alt="Creamy Soup">
+                            <span class="menu-category">Starters</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Creamy Mushroom Soup" data-price="10"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Creamy Mushroom Soup</h3>
+                                <strong>$10</strong>
+                            </div>
+                            <p>Rich and creamy mushroom soup finished with fresh herbs and toasted bread.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="desserts">
+                        <div class="menu-image">
+                            <img src="img/images (8).jpg" alt="Tiramisu">
+                            <span class="menu-category">Dessert</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Classic Tiramisu" data-price="12"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Classic Tiramisu</h3>
+                                <strong>$12</strong>
+                            </div>
+                            <p>Classic Italian tiramisu with espresso, mascarpone cream and cocoa.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="desserts">
+                        <div class="menu-image">
+                            <img src="./img/images (9).jpg" alt="Fresh Fruit">
+                            <span class="menu-category">Dessert</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Fresh Fruit Platter" data-price="13"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Fresh Fruit Platter</h3>
+                                <strong>$13</strong>
+                            </div>
+                            <p>A colorful selection of fresh seasonal fruits served with honey and mint.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="drinks">
+                        <div class="menu-image">
+                            <img src="./img/images (10).jpg" alt="Fresh Mojito">
+                            <span class="menu-category">Drinks</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Fresh Mint Mojito" data-price="9"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Fresh Mint Mojito</h3>
+                                <strong>$9</strong>
+                            </div>
+                            <p>Refreshing mint, lime and sparkling water served over ice.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="main">
+                        <div class="menu-image">
+                            <img src="./img/Béchamel Macaron.jpg" alt="Béchamel Macaroni">
+                            <span class="menu-category">Main Course</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Béchamel Macaroni" data-price="14"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Béchamel Macaroni</h3>
+                                <strong>$14</strong>
+                            </div>
+                            <p>Layers of pasta and seasoned minced meat baked under a rich, golden béchamel top.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="main">
+                        <div class="menu-image">
+                            <img src="./img/Gulash (Filo Pastry.jpg" alt="Gulash Filo Pastry">
+                            <span class="menu-category">Main Course</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Gulash (Filo Pastry)" data-price="16"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Gulash (Filo Pastry)</h3>
+                                <strong>$16</strong>
+                            </div>
+                            <p>Crisp filo pastry layered with spiced minced meat, baked until golden and flaky.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="main">
+                        <div class="menu-image">
+                            <img src="./img/Ra'ee' (Layered Meat Pastry).jpg" alt="Ra'ee' Layered Pastry">
+                            <span class="menu-category">Main Course</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Ra'ee' (Layered Meat Pastry)" data-price="16"><span
+                                    class="menu-select-mark"><svg viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Ra'ee' (Layered Meat Pastry)</h3>
+                                <strong>$16</strong>
+                            </div>
+                            <p>Thin layers of dough baked with tender meat and broth, a classic Egyptian comfort dish.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="hot-drinks">
+                        <div class="menu-image">
+                            <img src="./img/Traditional-Turkish-Coffee-11.webp" alt="Turkish Coffee">
+                            <span class="menu-category">Hot Drinks</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Turkish Coffee" data-price="6"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Turkish Coffee</h3>
+                                <strong>$6</strong>
+                            </div>
+                            <p>Rich traditional coffee with a deep, aromatic flavor.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="hot-drinks">
+                        <div class="menu-image">
+                            <img src="./img/img14.jpg" alt="Espresso">
+                            <span class="menu-category">Hot Drinks</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select" data-name="Espresso"
+                                    data-price="5"><span class="menu-select-mark"><svg viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Espresso</h3>
+                                <strong>$5</strong>
+                            </div>
+                            <p>Strong and smooth espresso, freshly prepared.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="hot-drinks">
+                        <div class="menu-image">
+                            <img src="./img/img13.jpg" alt="Cappuccino">
+                            <span class="menu-category">Hot Drinks</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select" data-name="Cappuccino"
+                                    data-price="7"><span class="menu-select-mark"><svg viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Cappuccino</h3>
+                                <strong>$7</strong>
+                            </div>
+                            <p>Espresso with steamed milk and a creamy foam.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="hot-drinks">
+                        <div class="menu-image">
+                            <img src="./img/Hot Chocolate.jpg" alt="Hot Chocolate">
+                            <span class="menu-category">Hot Drinks</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Hot Chocolate" data-price="8"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Hot Chocolate</h3>
+                                <strong>$8</strong>
+                            </div>
+                            <p>Velvety chocolate drink topped with soft milk foam.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="hot-drinks">
+                        <div class="menu-image">
+                            <img src="./img/Classic Tea.webp" alt="Tea">
+                            <span class="menu-category">Hot Drinks</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select"
+                                    data-name="Classic Tea" data-price="5"><span class="menu-select-mark"><svg
+                                        viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Classic Tea</h3>
+                                <strong>$5</strong>
+                            </div>
+                            <p>A classic cup of freshly brewed tea.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="hot-drinks">
+                        <div class="menu-image">
+                            <img src="./img/Green Tea.webp" alt="Green Tea">
+                            <span class="menu-category">Hot Drinks</span>
+                            <label class="menu-select"><input type="checkbox" class="item-select" data-name="Green Tea"
+                                    data-price="5"><span class="menu-select-mark"><svg viewBox="0 0 24 24">
+                                        <path d="M4 12l5 5L20 6" />
+                                    </svg></span></label>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Green Tea</h3>
+                                <strong>$5</strong>
+                            </div>
+                            <p>Light and refreshing green tea served warm.</p>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="wedding-cakes">
+                        <div class="menu-image">
+                            <img src="./img/Two-Tier Wedding Cake2.jpg" alt="Two Tier Wedding Cake">
+                            <span class="menu-category">Wedding Cakes</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Two-Tier Wedding Cake</h3>
+                                <strong>Custom quote</strong>
+                            </div>
+                            <p>A beautiful two-level cake, perfect for intimate weddings and elegant celebrations.</p>
+                            <a href="wedding.html#contact" class="cake-quote-link">Request a quote →</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="wedding-cakes">
+                        <div class="menu-image">
+                            <img src="./img/Three-Tier Wedding Cake.jpg" alt="Three Tier Wedding Cake">
+                            <span class="menu-category">Wedding Cakes</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Three-Tier Wedding Cake</h3>
+                                <strong>Custom quote</strong>
+                            </div>
+                            <p>A classic three-level wedding cake for a memorable and elegant reception.</p>
+                            <a href="wedding.html#contact" class="cake-quote-link">Request a quote →</a>
+                        </div>
+                    </div>
+
+                    <div class="menu-card" data-category="wedding-cakes">
+                        <div class="menu-image">
+                            <img src="img/Four-Tier Wedding Cake.webp" alt="Four Tier Wedding Cake">
+                            <span class="menu-category">Wedding Cakes</span>
+                        </div>
+                        <div class="menu-card-content">
+                            <div class="menu-title">
+                                <h3>Four-Tier Wedding Cake</h3>
+                                <strong>Custom quote</strong>
+                            </div>
+                            <p>A grand four-level cake created for large weddings and luxurious celebrations.</p>
+                            <a href="wedding.html#contact" class="cake-quote-link">Request a quote →</a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- =========================
+         Footer
+    ========================= -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <div>
+                    <h3>Stay in the loop</h3>
+                    <p>Seasonal menus, new packages, and the occasional discount — no spam.</p>
+                </div>
+
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                   <a href="index.html" class="footer-logo">
+                        <img src="img/Velora.png" alt="Velora Restaurant & Catering">
+                    </a>
+
+                    <p>
+                        Creating unforgettable dining experiences
+                        with exceptional food, fresh ingredients,
+                        and professional service.
+                    </p>
+
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.25-1.5 1.55-1.5H16.7V3.7C16.35 3.65 15.2 3.5 13.9 3.5c-2.7 0-4.55 1.65-4.55 4.7v2.7H6.6V14h2.75v8h4.15Z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M4.98 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM3.5 9h3v11.5h-3V9Zm6.6 0h2.87v1.57h.04c.4-.76 1.38-1.57 2.85-1.57 3.05 0 3.6 2 3.6 4.6v6.9h-3v-6.12c0-1.46-.03-3.34-2.04-3.34-2.04 0-2.35 1.6-2.35 3.24v6.22h-3V9Z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                                <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17.2" cy="6.8" r="1" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Our Services</h3>
+
+                    <ul>
+                        <li><a href="wedding.html">Wedding Catering</a></li>
+                        <li><a href="corporate.html">Corporate Events</a></li>
+                        <li><a href="private-parties.html">Private Parties</a></li>
+                        <li><a href="custom-catering.html">Custom Catering</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Contact Us</h3>
+
+                    <ul class="footer-contact">
+                        <li>📍 Cairo, Egypt</li>
+                        <li>📞 +20 10 1234 5678</li>
+                        <li>✉️ info@antixor.com</li>
+                        <li>🕒 Mon - Sat: 9AM - 8PM</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Velora Catering. All Rights Reserved.
+                </p>
+
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
+    <!-- Floating cart bar -->
+    <div class="cart-bar" id="cartBar">
+        <div class="cart-bar-info">
+            <span id="cartCount">0</span> item(s) selected —
+            <span class="cart-bar-total">$<span id="cartTotal">0</span></span>
+        </div>
+        <button class="cart-bar-btn" id="cartCheckoutBtn">
+            Proceed to Payment →
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+
+    <script>
+        // Menu filter: click a category button, show only matching cards
+        document.querySelectorAll('.menu-filter-btn').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+
+                document.querySelectorAll('.menu-filter-btn').forEach(function (b) {
+                    b.classList.remove('active');
+                });
+                btn.classList.add('active');
+
+                var category = btn.getAttribute('data-category');
+
+                document.querySelectorAll('.menu-card').forEach(function (card) {
+                    var cardCategory = card.getAttribute('data-category');
+
+                    if (category === 'all' || cardCategory === category) {
+                        card.style.display = '';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Cart: track checked items, show running total, send to payment.html
+        var cartBar = document.getElementById('cartBar');
+        var cartCount = document.getElementById('cartCount');
+        var cartTotal = document.getElementById('cartTotal');
+        var checkoutBtn = document.getElementById('cartCheckoutBtn');
+
+        function updateCart() {
+            var checked = document.querySelectorAll('.item-select:checked');
+            var total = 0;
+
+            checked.forEach(function (box) {
+                total += parseFloat(box.getAttribute('data-price')) || 0;
+            });
+
+            cartCount.textContent = checked.length;
+            cartTotal.textContent = total.toFixed(2);
+
+            if (checked.length > 0) {
+                cartBar.classList.add('visible');
+            } else {
+                cartBar.classList.remove('visible');
+            }
+        }
+
+        document.querySelectorAll('.item-select').forEach(function (box) {
+            box.addEventListener('change', updateCart);
+        });
+
+        checkoutBtn.addEventListener('click', function () {
+            var checked = document.querySelectorAll('.item-select:checked');
+            var items = [];
+            var total = 0;
+
+            checked.forEach(function (box) {
+                var price = parseFloat(box.getAttribute('data-price')) || 0;
+                items.push({
+                    name: box.getAttribute('data-name'),
+                    price: price
+                });
+                total += price;
+            });
+
+            localStorage.setItem('antixorCart', JSON.stringify({
+                items: items,
+                total: total.toFixed(2)
+            }));
+
+            window.location.href = 'payment.html';
+        });
+    </script>
+
+</body>
+
+</html>

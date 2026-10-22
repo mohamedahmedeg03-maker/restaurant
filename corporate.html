@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="icon" type="image/png" href="img/Velora.png">
+    <title>Velora</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,500;0,600;1,500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header class="header" id="siteHeader">
+        <nav class="navbar container">
+
+            <a href="index.html" class="velora-logo">
+                <img src="img/Velora.png" alt="Antixor Restaurant & Catering">
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="./gallery.html">Gallery</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+
+                <div class="nav-search" id="navSearch">
+                    <button class="search-btn" id="searchToggle" aria-label="Search">⌕</button>
+                    <input type="text" class="search-input" id="searchInput" placeholder="Search the menu...">
+                </div>
+
+                <a href="./contact.html" class="quote-btn">
+                    Contact US
+                </a>
+
+                <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
+
+        </nav>
+
+        <!-- Mobile menu — matches desktop nav exactly, no dead #8/#9 anchors -->
+        <div class="mobile-menu" id="mobileMenu">
+              <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">Services</a></li>
+                <li><a href="Explore Our Menu.html">Menu</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="about.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <a href="./contact.html" class="quote-btn mobile-quote-btn">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- CORPORATE HERO -->
+
+    <section class="corporate-hero">
+
+        <video class="corporate-hero-video" autoplay muted loop playsinline>
+            <source src="video/corporate-events.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="corporate-overlay"></div>
+
+        <div class="container corporate-hero-content">
+
+            <span class="corporate-kicker">
+                <svg viewBox="0 0 24 24">
+                    <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+                    <rect x="3" y="7" width="18" height="12" rx="2" />
+                    <path d="M3 12h18" />
+                </svg>
+                Corporate catering
+            </span>
+
+            <h1>
+                Food that
+                <strong>works for business</strong>
+            </h1>
+
+            <p>
+                Reliable catering for meetings, conferences, business
+                lunches, and office events — delivered on your schedule,
+                not around it.
+            </p>
+
+            <a href="#corporate-packages" class="corporate-btn">
+                Explore corporate options
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- INTRO -->
+
+    <section class="corporate-intro reveal">
+
+        <div class="container">
+
+            <div class="row align-items-center g-5">
+
+                <div class="col-lg-7">
+
+                    <span class="corporate-kicker corporate-kicker--dark">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+                            <rect x="3" y="7" width="18" height="12" rx="2" />
+                            <path d="M3 12h18" />
+                        </svg>
+                        Built for business
+                    </span>
+
+                    <h2 class="corporate-title">
+                        Keep your team
+                        <span>focused and energized</span>
+                    </h2>
+
+                    <p>
+                        Great meetings need great food. Our corporate catering
+                        keeps your team fed and focused, whatever the format —
+                        a small meeting or a full-day conference.
+                    </p>
+
+                    <p>
+                        You send the headcount and schedule; our team handles
+                        the food, the setup, and the cleanup.
+                    </p>
+
+                    <div class="corporate-numbers">
+
+                        <div>
+                            <strong>250+</strong>
+                            <span>Business Events</span>
+                        </div>
+
+                        <div>
+                            <strong>98%</strong>
+                            <span>On-Time Delivery</span>
+                        </div>
+
+                        <div>
+                            <strong>24/7</strong>
+                            <span>Event Support</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-5">
+
+                    <div class="corporate-image">
+
+                        <img src="img/gXGGMJ_CXirB6Cn0TA1b5zEzGOjDA8r-bfOjKgBDBTXIY7j_NADs4XcBsmUeU9wSYW6wiVhrgyl7hkhanXQuGk7bNh8Fb6Zix1qr6b_eXmV-Da_W4dsvyl_czRC2aoWmQ-WYR0D8KnqUK3n_UzRfZ8g_mxKxlU2qE5VplrOX0MZ_oRqYMG8ShaU9_yhKNPDx.jpg"
+                            alt="Corporate Meeting Catering">
+
+                        <div class="corporate-image-badge">
+
+                            <strong>10+</strong>
+                            <span>Years Experience</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SERVICES -->
+
+    <section class="corporate-solutions reveal">
+
+        <div class="container">
+
+            <div class="section-heading text-center mx-auto">
+
+                <span class="corporate-kicker corporate-kicker--dark" style="justify-content:center;">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+                        <rect x="3" y="7" width="18" height="12" rx="2" />
+                        <path d="M3 12h18" />
+                    </svg>
+                    Our solutions
+                </span>
+
+                <h2>
+                    Catering for
+                    <span>every business need</span>
+                </h2>
+
+                <p>
+                    Flexible food solutions designed around your
+                    schedule, team size, and event format.
+                </p>
+
+            </div>
+
+
+            <div class="corporate-services">
+
+                <div class="corporate-service">
+
+                    <div class="corporate-service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 8h13v6a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5V8Z" />
+                            <path d="M17 9h1a3 3 0 0 1 0 6h-1" />
+                            <path d="M7 3c0 1-1 1-1 2M11 3c0 1-1 1-1 2" />
+                        </svg>
+                    </div>
+
+                    <h3>Meeting Catering</h3>
+
+                    <p>
+                        Fresh coffee and light meals delivered
+                        straight to your meeting room.
+                    </p>
+
+                    <a href="#">
+                        View service →
+                    </a>
+
+                </div>
+
+
+                <div class="corporate-service">
+
+                    <div class="corporate-service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="3" y="7" width="18" height="12" rx="2" />
+                            <path d="M3 13h18M9 7v12" />
+                        </svg>
+                    </div>
+
+                    <h3>Office Lunch</h3>
+
+                    <p>
+                        Individual meals and group lunch options
+                        for your entire office.
+                    </p>
+
+                    <a href="#">
+                        View service →
+                    </a>
+
+                </div>
+
+
+                <div class="corporate-service">
+
+                    <div class="corporate-service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <rect x="9" y="2" width="6" height="11" rx="3" />
+                            <path d="M5 10a7 7 0 0 0 14 0M12 17v4M9 21h6" />
+                        </svg>
+                    </div>
+
+                    <h3>Conferences</h3>
+
+                    <p>
+                        Complete catering for conferences,
+                        seminars, and large business events.
+                    </p>
+
+                    <a href="#">
+                        View service →
+                    </a>
+
+                </div>
+
+
+                <div class="corporate-service">
+
+                    <div class="corporate-service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M3 9l9-5 9 5-9 5-9-5Z" />
+                            <path d="M3 9v6l9 5 9-5V9" />
+                            <path d="M12 14v6" />
+                        </svg>
+                    </div>
+
+                    <h3>Box Meals</h3>
+
+                    <p>
+                        Individually packed meals prepared for
+                        busy teams and offsite events.
+                    </p>
+
+                    <a href="#">
+                        View service →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DAILY SCHEDULE -->
+
+    <section class="corporate-day reveal">
+
+        <div class="container">
+
+            <div class="row g-5 align-items-center">
+
+                <div class="col-lg-5">
+
+                    <span class="corporate-kicker corporate-kicker--dark">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+                            <rect x="3" y="7" width="18" height="12" rx="2" />
+                            <path d="M3 12h18" />
+                        </svg>
+                        A full day of catering
+                    </span>
+
+                    <h2 class="corporate-title">
+                        From morning
+                        <span>to evening</span>
+                    </h2>
+
+                    <p>
+                        Keep your employees and guests comfortable
+                        throughout the entire business day with
+                        flexible catering options.
+                    </p>
+
+                </div>
+
+
+                <div class="col-lg-7">
+
+                    <div class="corporate-timeline">
+
+                        <div class="timeline-item">
+
+                            <span>08:00 AM</span>
+
+                            <div>
+                                <h3>Breakfast</h3>
+                                <p>
+                                    Fresh pastries, fruit, coffee
+                                    and breakfast selections.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-item">
+
+                            <span>11:00 AM</span>
+
+                            <div>
+                                <h3>Coffee Break</h3>
+                                <p>
+                                    Coffee, tea, juices and
+                                    light snacks.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-item">
+
+                            <span>01:00 PM</span>
+
+                            <div>
+                                <h3>Business Lunch</h3>
+                                <p>
+                                    Fresh meals prepared for
+                                    your entire team.
+                                </p>
+                            </div>
+
+                        </div>
+
+
+                        <div class="timeline-item">
+
+                            <span>04:00 PM</span>
+
+                            <div>
+                                <h3>Afternoon Break</h3>
+                                <p>
+                                    Refreshments and sweet treats
+                                    to finish the day.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PACKAGES -->
+
+    <section class="corporate-packages reveal" id="corporate-packages">
+
+        <div class="container">
+
+            <div class="section-heading text-center mx-auto">
+
+                <span class="corporate-kicker corporate-kicker--dark" style="justify-content:center;">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+                        <rect x="3" y="7" width="18" height="12" rx="2" />
+                        <path d="M3 12h18" />
+                    </svg>
+                    Corporate packages
+                </span>
+
+                <h2>
+                    Simple plans.
+                    <span>Professional service.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+
+                    <div class="corporate-package">
+
+                        <div class="scale-icons">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="9" y="14" width="6" height="7" rx="1" />
+                            </svg>
+                        </div>
+
+                        <h3>Meeting</h3>
+
+                        <strong>Small teams</strong>
+
+                        <ul>
+                            <li>✓ Coffee & Tea</li>
+                            <li>✓ Fresh Pastries</li>
+                            <li>✓ Light Snacks</li>
+                            <li>✓ Water & Juices</li>
+                        </ul>
+
+                        <a href="#">
+                            Request package →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <div class="corporate-package corporate-featured">
+
+                        <span class="corporate-package-badge">
+                            Most requested
+                        </span>
+
+                        <div class="scale-icons">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="4" y="14" width="5" height="7" rx="1" />
+                                <rect x="14" y="9" width="5" height="12" rx="1" />
+                            </svg>
+                        </div>
+
+                        <h3>Business Day</h3>
+
+                        <strong>Full day events</strong>
+
+                        <ul>
+                            <li>✓ Breakfast</li>
+                            <li>✓ Coffee Break</li>
+                            <li>✓ Business Lunch</li>
+                            <li>✓ Afternoon Snacks</li>
+                            <li>✓ Beverage Service</li>
+                        </ul>
+
+                        <a href="#">
+                            Request package →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-lg-4">
+
+                    <div class="corporate-package corporate-package--large">
+
+                        <div class="scale-icons">
+                            <svg viewBox="0 0 24 24">
+                                <rect x="3" y="16" width="4.5" height="5" rx="1" />
+                                <rect x="10" y="11" width="4.5" height="10" rx="1" />
+                                <rect x="17" y="6" width="4.5" height="15" rx="1" />
+                            </svg>
+                        </div>
+
+                        <h3>Conference</h3>
+
+                        <strong>Large events</strong>
+
+                        <ul>
+                            <li>✓ Complete Food Service</li>
+                            <li>✓ Multiple Stations</li>
+                            <li>✓ Dedicated Staff</li>
+                            <li>✓ Event Coordination</li>
+                        </ul>
+
+                        <a href="#">
+                            Request package →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+
+    <section class="corporate-cta">
+
+        <div class="container">
+
+            <div class="corporate-cta-content">
+
+                <span class="corporate-kicker" style="justify-content:center;">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" />
+                        <rect x="3" y="7" width="18" height="12" rx="2" />
+                        <path d="M3 12h18" />
+                    </svg>
+                    Ready for your next event?
+                </span>
+
+                <h2>
+                    Let's make your
+                    <strong>next meeting delicious.</strong>
+                </h2>
+
+                <p>
+                    Send your event details, headcount, and schedule —
+                    we'll come back with a catering plan built for it.
+                </p>
+
+                <a href="./quote.html" class="corporate-btn">
+                    Request corporate quote
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container">
+
+            <!-- Newsletter -->
+            <div class="footer-newsletter">
+                <div>
+                    <h3>Stay in the loop</h3>
+                    <p>Seasonal menus, new packages, and the occasional discount — no spam.</p>
+                </div>
+
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" id="newsletterEmail" placeholder="Your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <a href="index.html" class="footer-logo">
+                        <img src="img/Velora.png" alt="Antixor Restaurant & Catering">
+                    </a>
+
+
+                    <p>
+                        Creating unforgettable dining experiences
+                        with exceptional food, fresh ingredients,
+                        and professional service.
+                    </p>
+
+                    <div class="footer-socials">
+                        <a href="#" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M13.5 21v-8h2.7l.4-3.1h-3.1V8c0-.9.25-1.5 1.55-1.5H16.7V3.7C16.35 3.65 15.2 3.5 13.9 3.5c-2.7 0-4.55 1.65-4.55 4.7v2.7H6.6V14h2.75v8h4.15Z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M4.98 3.5a2 2 0 1 1 0 4 2 2 0 0 1 0-4ZM3.5 9h3v11.5h-3V9Zm6.6 0h2.87v1.57h.04c.4-.76 1.38-1.57 2.85-1.57 3.05 0 3.6 2 3.6 4.6v6.9h-3v-6.12c0-1.46-.03-3.34-2.04-3.34-2.04 0-2.35 1.6-2.35 3.24v6.22h-3V9Z" />
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+                                <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                                <circle cx="12" cy="12" r="4" />
+                                <circle cx="17.2" cy="6.8" r="1" />
+                            </svg>
+                        </a>
+                    </div>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Quick Links</h3>
+
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="menu.html">Our Menu</a></li>
+                        <li><a href="./gallery.html">Gallery</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Our Services</h3>
+
+                    <ul>
+                        <li><a href="wedding.html">Wedding Catering</a></li>
+                        <li><a href="corporate.html">Corporate Events</a></li>
+                        <li><a href="private-parties.html">Private Parties</a></li>
+                        <li><a href="custom-catering.html">Custom Catering</a></li>
+                    </ul>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h3>Contact Us</h3>
+
+                    <ul class="footer-contact">
+                        <li>📍 Cairo, Egypt</li>
+                        <li>📞 +20 10 1234 5678</li>
+                        <li>✉️ info@antixor.com</li>
+                        <li>🕒 Mon - Sat: 9AM - 8PM</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Antixor Catering. All Rights Reserved.
+                </p>
+
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Only one back-to-top button now -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
